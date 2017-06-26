@@ -41,3 +41,25 @@ server.on('listening', common.mustCall(function() {
   req.end();
 
 }));
+
+//The HEADERS frame starting the trailers header block has the END_STREAM flag set.
+/**
+ *
+ */
+
+
+//A sender must not generate a trailer that contains a field necessary for message framing (e.g., Transfer-Encoding and Content-Length), routing (e.g., Host), request modifiers (e.g., controls and conditionals in Section 5 of [RFC7231]), authentication (e.g., see [RFC7235] and [RFC6265]), response control data (e.g., see Section 7.1 of [RFC7231]), or determining how to process the payload (e.g., Content-Encoding, Content-Type, Content-Range, and Trailer).
+/**
+ * create response,
+ * add valid trailers
+ * everything is fine
+ */
+
+/**
+ * create response
+ * add invalid header (retrieve complete list of invalid ones)
+ * get exception
+ */
+
+//can trailers be sent only if client accepts them in TE ?
+
